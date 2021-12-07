@@ -10,27 +10,27 @@ public class U3S2M1ApplicationTestProgram {
                         Arrays.asList(AmazonDevice.FIRE_TV_STICK, AmazonDevice.FIRE_TV_STICK_4K, AmazonDevice.ECHO_BUDS));
                 System.out.println(flex.hashCode()); // 118352462
 
-                System.out.print("-".repeat(50) + "\nDefining button part...");
+                System.out.println("-".repeat(50) + "\nDefining button part...");
                 DevicePart button = new DevicePart("CUI Devices", "CMEJ-04150420P",
                         Arrays.asList(AmazonDevice.ECHO_PLUS));
                 System.out.println(button.hashCode()); // 865113938
 
-                System.out.print("-".repeat(50) + "\nDefining omnidirectional part...");
+                System.out.println("-".repeat(50) + "\nDefining omnidirectional part...");
                 DevicePart omnidirectional = new DevicePart("Knowles", "FG-23329-P142",
                         Arrays.asList(AmazonDevice.ECHO_PLUS));
                 System.out.println(omnidirectional.hashCode()); // 1442407170
 
-                System.out.print("-".repeat(50) + "\nDefining noiseCancelling part...");
+                System.out.println("-".repeat(50) + "\nDefining noiseCancelling part...");
                 DevicePart noiseCancelling = new DevicePart("Knowles", "FB-EM-30342-000",
                         Arrays.asList(AmazonDevice.ECHO_BUDS));
                 System.out.println(noiseCancelling.hashCode()); // 1975012498
 
-                System.out.print("-".repeat(50) + "\nDefining cuiDevice part...");
+                System.out.println("-".repeat(50) + "\nDefining cuiDevice part...");
                 DevicePart cuiDevice = new DevicePart("CUI Devices", "CMEJ-04150420P",
                         Arrays.asList(AmazonDevice.ECHO_PLUS));
                 System.out.println(cuiDevice.hashCode()); // 865113938
 
-                System.out.print("-".repeat(50) + "\nDefining Wired part...");
+                System.out.println("-".repeat(50) + "\nDefining Wired part...");
                 DevicePart wired = new DevicePart("Knowles", "VFG-30747-000",
                         Arrays.asList(AmazonDevice.FIRE_7_KIDS_EDITION, AmazonDevice.FIRE_HD_8_KIDS_EDITION, AmazonDevice.FIRE_HD_10_KIDS_EDITION));
                 System.out.println(wired.hashCode()); // 118352462
@@ -70,6 +70,8 @@ public class U3S2M1ApplicationTestProgram {
                 System.out.println("-".repeat(50) + "\nadding wired part to HashSet in PartManager...");
                 microphonePartManager.addDevicePart(wired);
 
-                return;
+                System.out.println("-".repeat(50) + "\nLooking for: " + button);
+                DevicePart foundObject = microphonePartManager.findDevicePart(button);
+                System.out.println("Found: " + foundObject);
         }
 }
